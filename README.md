@@ -14,7 +14,7 @@ New books are bought in packs of 10. In the NewBook class edit buy to increase t
 New books are sold one at a time. In the NewBook class edit sell to decrease the amount by 1. You should call a method from Item to do this.
 The bookstore wants to track how the number of items change over time. Thus class Item should be modified such that it saves the amount history as a list. In the Item class edit __init__, buy and sell to record the history. Then edit the getHistory so that it returns the history as a list.
 
-dannadanna~(1054583861) 2020/7/31 21:14:05
+
 Here is an example of how the NewBook class should be used
 
 B = NewBook(20)
@@ -31,43 +31,4 @@ History is: [20, 19, 18, 28]
 
 
 
-代码部分：
-
-class Item:
-    def __init__(self,name, amount):
-        self.name = name
-        self.amount = amount
-        
-    def buy(self, number):
-        self.amount += number
-
-    def sell(self, number):
-        self.amount -= number
-        
-    def getName(self):
-        return self.name
-        
-    def getAmount(self):
-        return self.amount
-        
-    def getHistory(self):
-        pass        
-        
-    def __str__(self):
-        return "There are {0} {1}s available.".format(self.amount, self.name)
-
-class NewBook(Item):
-    def __init__(self, amount):
-        pass
-    
-    def buy(self):
-        pass
-    
-    def sell(self):
-        pass
- 
-if __name__ == "__main__":
-    """
-    Test your code here
-    """
 
